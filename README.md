@@ -93,35 +93,58 @@ EXAMPLES:
 
 // action ForecastReader
 // get a forecast for latitude=42.3601 longitude=71.0589
+
 php Forecaster.php action=ForecastReader latitude 42.3601 and longitude 71.0589
 
 Example Output:
+
 Timezone: Asia/Almaty
+
 time: 1634840802
+
 summary: Snow
+
 icon: snow
+
 precipIntensity: 0.0309
+
 precipProbability: 0.5
+
 precipType: snow
+
 precipAccumulation: 0.383
+
 temperature: 26.23
+
 apparentTemperature: 20.81
+
 dewPoint: 26.23
+
 humidity: 1
+
 pressure: 1022.7
+
 windSpeed: 4.51
+
 windGust: 7.95
+
 windBearing: 266
+
 cloudCover: 0.99
+
 uvIndex: 0
+
 visibility: 1.026
+
 ozone: 309.5
 
 
 // action ForecastService
 // start a collection of forecasts for latitude 32.22 and longitude=60.05 at an interval of 5 minutes
+
 php Forecaster.php action=ForecastService latitude=32.22 longitude=60.05 interval=5
 
 // action findForecastsByLocationIdAfter
 // get all forecasts for location_id 4 with epoch greater than 1537329750
+
 php Forecaster.php action=findForecastsByLocationIdAfter location_id=4 epoch=1537329750
