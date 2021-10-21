@@ -114,7 +114,7 @@ switch ( $params["action"] ) {
 		$forecast_reader = new ForecastReader();
 		$forecast_reader->setLatLong( (float)$params["latitude"], (float)$params["longitude"] );
 
-		// database 
+		// database
 		$forecast_repository = new ForecastRepository();
 
 		// service
@@ -137,7 +137,7 @@ switch ( $params["action"] ) {
 		// check for required params for this action
 		checkRequired( $required, $params );
 
-		// database 
+		// database
 		$forecast_repository = new ForecastRepository();
 
 		$forecast_repository->findForecastsByLocationIdAfter( (int)$params['location_id'], (int)$params['epoch'] );
