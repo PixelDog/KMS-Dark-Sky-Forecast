@@ -20,9 +20,13 @@ Edit:
 db/config.php
 
 Change the following vars to appropriate values for your database configuration for local host:
+
 $host       = "localhost"; // local host
+
 $username   = "root"; // database username for local host
+
 $password   = "root99"; // user password
+
 $dbname     = "kms_darksky_db"; // database name
 
 NOTE: You do not need to change $dbname, the install script will create the database for you.
@@ -47,30 +51,41 @@ forecasts by lat/long from the Dark Sky API.
 
 Actions/parameters are as follows:
 
-ACTIONS:
 ForecastReader:
 Get a forecast from the Dark Sky API by latitude and longitude
-@param float latitude
-@param float longitude
+
+@param (float) latitude
+
+@param (float) longitude
 
 ForecastService:
 Start a collection of forecasts from the Dark Sky API by latitude and longitude and store to the
 database at [interval]. [interval] default: 240 minutes (4 hours)
-@param float latitude
-@param float longitude
-@param int interval
 
-findForecastsByLocationIdAfter:
-Retrieve all forecasts from the database for location_id after epoch
-@param int location_id
+@param (float) latitude
+
+@param (float) longitude
+
+@param (int) interval
+
+findForecastsByLocationIdAfter: Retrieve all forecasts from the database for location_id after epoch
+
+@param (int) location_id
+
 @param int epoch
 
 PARAMS:
+
 @param (string) action Required, accepts: ForecastReader, ForecastService, findForecastsByLocationIdAfter
+
 @param (float) latitude the latitude of the forecast. Required for actions: ForecastReader, ForecastService
+
 @param (float) longitude the longitude of the forecast. Required for actions: ForecastReader, ForecastService
+
 @param (int) interval the interval of data collection in minutes. Default is 240 minutes (4 hours). Optional for action: ForecastService
+
 @param (int) location_id the location_id in the database for the forecast. Required for action: findForecastsByLocationIdAfter
+
 @param (int) epoch the epoch to query after to find forecasts. Required for action: findForecastsByLocationIdAfter
 
 
